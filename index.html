@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!-- reference Moment.js library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+  <title>Interactive Job Search</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Foundation Framework Library Stylesheet-->
+  <link rel="stylesheet" href="foundation-6.5.1/css/foundation.min.css">
+  <!-- Application Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<h2>Moment Date</h2>
-<!-- container for Moment.js output -->
-<div id="displayMoment"></div>
-    <script type="text/javascript">
-    (function() {
-    // instantiate a moment object
-    var NowMoment = moment().format('MMMM Do YYYY, h:mm:ss a');
-    
-    // display value of moment object in #displayMoment div
-    var eDisplayMoment = document.getElementById("displayMoment");
-    eDisplayMoment.innerHTML = NowMoment;
+  <!-- HTML Content Goes HERE -->
+  <h1>Test</h1>
 
 
-    });
-    </script>
 
+  <!-- reference Moment.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+  <!-- jQuery library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Foundation Framework Library -->
+  <script src="foundation-6.5.1/js/foundation.min.js"></script>
+  <script src="foundation-6.5.1/js/what-input.js"></script>
+  <!-- Application javascript library -->
+  <script src="script.js"></script>
 </body>
 </html>
