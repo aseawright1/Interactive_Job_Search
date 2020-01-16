@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- reference Moment.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+</head>
+<body>
+
+<h2>Moment Date</h2>
+<!-- container for Moment.js output -->
+<div id="displayMoment"></div>
+    <script type="text/javascript">
+    (function() {
+    // instantiate a moment object
+    var NowMoment = moment().format('MMMM Do YYYY, h:mm:ss a');
+    
+    // display value of moment object in #displayMoment div
+    var eDisplayMoment = document.getElementById("displayMoment");
+    eDisplayMoment.innerHTML = NowMoment;
+
+    console.log(eDisplayMoment);
+
+    });
+    </script>
+
+</body>
+</html>
