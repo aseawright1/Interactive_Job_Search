@@ -3,19 +3,47 @@
 <head>
   <title>Interactive Job Search</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <!-- Foundation Framework Library Stylesheet-->
   <link rel="stylesheet" href="foundation-6.5.1/css/foundation.min.css">
   <!-- jQueryUI library Stylesheet -->
   <link rel="stylesheet" href="css/jquery-ui.min.css">
   <!-- Application Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/page-layout.css">
+  <link rel="stylesheet" href="css/job-card.css">
 </head>
 <body>
+
   <!-- HTML Content Goes HERE -->
-  <h1>Test</h1>
 
+    <!-- FOUNDATION TEMPLATES USED AND MODIFIED:
+    https://get.foundation/building-blocks/blocks/holy-grail.html
+    https://get.foundation/building-blocks/blocks/card-flex-article.html -->
 
+  <div class="page-layout">
+    <div class="page-header">
+      <h3>Header</h3>
+    </div>
+  
+    <div id="jobsList" class="page-left">
+      <h3>Job Listings</h3>
+
+      <div class="card-flex-article card">
+        <div class="card-section">
+          <h3 class="article-title">Insert Job Title</h3>
+          <div class="article-details">
+            <span>Company</span><br> 
+            <span>Link</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div id="jobDetail" class="page-middle">
+      <h3>Job Description</h3>
+    </div>
+ 
+  </div>  
 
   <!-- reference Moment.js library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>

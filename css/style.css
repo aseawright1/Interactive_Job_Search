@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 #header {
     position: fixed;
     overflow: hidden;
@@ -8,3 +9,8 @@
 #jobsList {
     margin-top: 350px;
 }
+=======
+.company {
+    font-size: xx-large;
+}
+>>>>>>> Stashed changes
