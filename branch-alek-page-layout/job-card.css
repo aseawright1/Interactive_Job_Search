@@ -1,0 +1,96 @@
+.card-flex-article .card-divider {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    background: transparent;
+  }
+  
+  .card-flex-article .card-divider p {
+    margin-bottom: 0;
+  }
+  
+  .card-flex-article .card-divider .avatar {
+    margin-right: 0.75rem;
+  }
+  
+  .card-flex-article .avatar {
+    position: relative;
+  }
+  
+  .card-flex-article .avatar img {
+    border-radius: 50%;
+  }
+  
+  .card-flex-article .avatar.with-add-icon .fa {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #cc4b37;
+  }
+  
+  .card-flex-article .card-actions .fa:not(:last-of-type) {
+    margin-right: 1rem;
+  }
+  
+  .card-flex-article .card-image {
+    position: relative;
+  }
+  
+  .card-flex-article .card-tag {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 3%;
+  }
+  
+  .card-flex-article .card-section .article-title {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 1.75rem;
+    margin-bottom: 0;
+  }
+  
+  .card-flex-article .card-section .article-details {
+    font-size: 0.75rem;
+    opacity: 0.5;
+    padding-bottom: 0.75rem;
+  }
+  
+  .card-flex-article .card-section .article-summary {
+    font-family: 'Helvetica', serif;
+  }
+  
+  .card-flex-article .user-info {
+    font-size: 0.75rem;
+  }
+  
+  .card-flex-article .user-info .user-name {
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  
+  .card-flex-article .salary-range {
+    font-size: 0.75rem;
+    opacity: 0.5;
+  }
+  
+  /* pagination below */
+
+  @media screen and (max-width: 39.9375em) {
+    .pagination:after {
+      display: inline-block;
+      content: attr(data-page) " of " attr(data-total);
+      position: relative;
+      text-align: center;
+      width: 80px;
+      right: 80px;
+    }
+    .pagination-next {
+      position: relative;
+      left: 80px;
+    }
+  }
+  
+  
