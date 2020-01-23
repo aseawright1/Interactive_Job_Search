@@ -3,13 +3,89 @@
 <head>
   <title>Interactive Job Search</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <!-- Foundation Framework Library Stylesheet-->
   <link rel="stylesheet" href="foundation-6.5.1/css/foundation.min.css">
   <!-- jQueryUI library Stylesheet -->
   <link rel="stylesheet" href="css/jquery-ui.min.css">
   <!-- Application Stylesheet -->
+
   <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="css/page-layout.css">
+  <link rel="stylesheet" href="css/job-card.css">
+</head>
+<body>
+
+  <!-- HTML Content Goes HERE -->
+
+    <!-- FOUNDATION TEMPLATES USED AND MODIFIED:
+    https://get.foundation/building-blocks/blocks/holy-grail.html
+    https://get.foundation/building-blocks/blocks/card-flex-article.html -->
+
+  <div class="page-layout">
+    <div class="page-header">
+      <h3>Header</h3>
+    </div>
+  
+    <div id="jobsList" class="page-left">
+      <h3>Job Listings</h3>
+
+      <div class="card-flex-article card">
+        <div class="card-section">
+          <h3 class="article-title">Insert Job Title</h3>
+          <div class="article-details">
+
+            <span>Company</span><br> 
+            <span>Link</span>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div id="jobDetail" class="page-middle">
+      <h3>Job Description</h3>
+    </div>
+ 
+
+        <!-- pagination -->
+        <ul class="pagination text-center" role="navigation" aria-label="Pagination" data-page="6" data-total="16">
+            <li class="pagination-previous disabled">Previous <span class="show-for-sr">page</span></li>
+            <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+            <li><a href="#" aria-label="Page 2">2</a></li>
+            <li><a href="#" aria-label="Page 3">3</a></li>
+            <li class="ellipsis" aria-hidden="true"></li>
+            <li class="pagination-next"><a href="#" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
+          </ul>              
+    </div>
+    <div class="page-middle">
+      <h3>Job Title</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias mollitia debitis at atque temporibus ratione molestiae id eos, cupiditate numquam dolor vero totam, quisquam libero voluptas. Animi ipsa cumque, tempore.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias mollitia debitis at atque temporibus ratione molestiae id eos, cupiditate numquam dolor vero totam, quisquam libero voluptas. Animi ipsa cumque, tempore.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias mollitia debitis at atque temporibus ratione molestiae id eos, cupiditate numquam dolor vero totam, quisquam libero voluptas. Animi ipsa cumque, tempore.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias mollitia debitis at atque temporibus ratione molestiae id eos, cupiditate numquam dolor vero totam, quisquam libero voluptas. Animi ipsa cumque, tempore.</p>
+    </div>
+  
+    <!-- <div class="page-right">
+      <h3>Nav</h3>
+      <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+      </ul>
+    </div> -->
+  
+    <div class="page-footer">
+      <h3>Footer</h3>
+    </div>
+  
+    
+
+  </div>  
+
+  <!-- reference Moment.js library -->
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
   <!-- jQuery library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
