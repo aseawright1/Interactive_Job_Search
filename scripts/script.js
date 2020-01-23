@@ -43,6 +43,7 @@ function alert_msg(title, text, mode, level) {
   $('#alertMessage').dialog('open');
   return false;
 }
+
 const jobs = [
   {
     title: '',
@@ -51,6 +52,38 @@ const jobs = [
     link: '',
   },
 ];
+
+function setDetail(div) {
+  const link = div.attr('data-link');
+  const el = $('<iframe>');
+  el.attr('src', link);
+  $('#jobDetail').empty();
+  $('#jobDetail').append(el);
+}
+
+function parseJobs() {
+  // Populate Jobs List Section from Jobs Array
+  for (let x = 0; x < jobs.length; x += 1) {
+    const job = $('<div>');
+    job.addClass('job');
+    job.attr('onclick', 'setDetail(this);');
+    job.attr('data-link', jobs[x].link);
+    const title = $('<p>').text(`Title: ${jobs[x].title}`);
+    const company = $('<p>').text(`Company: ${jobs[x].company}`);
+    const description = $('<p>').text(`Description: ${jobs[x].description}`);
+    const link = $('<a>').attr('href', jobs[x].link).text(jobs[x].link);
+    job.append(title);
+    job.append(company);
+    job.append(description);
+    job.append(link);
+    $('#jobsList').append(job);
+  }
+  // Populate Job Detail Section from first Job Link
+  const el = $('<iframe>');
+  el.attr('src', jobs[0].link);
+  $('#jobDetail').append(el);
+}
+
 // USAJOBS API
 function getUSAJOBS(key, loc) {
   const authKey = 'hj0D4Ir4RE5JwrvNkpwBJ4p0Nof6pqfn52EknRPkn+4=';
@@ -74,6 +107,7 @@ function getUSAJOBS(key, loc) {
       jobs.push(job);
     }
     console.log(jobs);
+    parseJobs();
   });
 }
 
@@ -95,9 +129,37 @@ function getMUSEJOBS(category, loc) {
       jobs.push(job);
     }
     console.log(jobs);
+    parseJobs();
   });
 }
 
+// Click Event for Search Button
+$('#btnSearch').click(() => {
+  if ($('#txtLocation').val() === '') {
+    alert_msg('Warning', 'You must enter a City or Zip Code!', true, 1);
+    return false;
+  }
+  if ($('#txtKeyword').val() === '' && $('#txtCategory').val() === '') {
+    alert_msg('Warning', 'You must enter either a Keyword or a Category!', true, 1);
+    return false;
+  }
+  // Clear Jobs Array
+  jobs.length = 0;
+  // Clear Jobs List Section
+  $('#jobsList').empty();
+  // Clear Job Detail Section
+  $('#jobDetail').empty();
+  if ($('#txtCategory').val() != '') {
+    const category = $('#txtCategory').val();
+    const location = $('#txtLocation').val();
+    getMUSEJOBS(category, location);
+  } else {
+    const keyword = $('#txtKeyword').val();
+    const location = $('#txtLocation').val();
+    getUSAJOBS(keyword, location);
+  }
+});
+
 // Test functions
-getUSAJOBS('Web Developer', 'Overland Park,KS');
-getMUSEJOBS('Data Science', 'Overland Park,KS');
+// getUSAJOBS('Web Developer', 'Overland Park,KS');
+// getMUSEJOBS('Data Science', 'Overland Park,KS');
