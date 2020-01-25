@@ -62,6 +62,10 @@ function setDetail(div) {
 }
 
 function parseJobs() {
+  if (jobs.length === 0) {
+    alert_msg('Information', 'No Jobs found for given Search Criteria.', true, 0);
+    return false;
+  }
   // Populate Jobs List Section from Jobs Array
   for (let x = 0; x < jobs.length; x += 1) {
     const sp1 = $('<span>').text(`Company: ${jobs[x].company}`);
