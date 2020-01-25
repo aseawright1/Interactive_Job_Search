@@ -54,34 +54,38 @@ const jobs = [
 ];
 
 function setDetail(div) {
-  const link = div.attr('data-link');
-  const el = $('<iframe>');
-  el.attr('src', link);
+  const desc = $(div).attr('data-desc');
   $('#jobDetail').empty();
-  $('#jobDetail').append(el);
+  $('#jobDetail').html(desc);
+  $('.card').removeClass('highlight');
+  $(div).addClass('highlight');
 }
 
 function parseJobs() {
   // Populate Jobs List Section from Jobs Array
   for (let x = 0; x < jobs.length; x += 1) {
-    const job = $('<div>');
-    job.addClass('job');
+    const sp1 = $('<span>').text(`Company: ${jobs[x].company}`);
+    const sp2 = $('<span>');
+    const link = sp2.append($('<a>').attr('href', jobs[x].link).text(jobs[x].link));
+    const h3 = $('<h3>').addClass('article-title').text(jobs[x].title);
+    const dtl = $('<div>').addClass('article-details');
+    const card = $('<div>').addClass('card-section');
+    const job = $('<div>').addClass('card-flex-article card');
+    if (x === 0) {
+      job.addClass('highlight');
+    }
+    dtl.append(sp1);
+    dtl.append($('<br>'));
+    dtl.append(link);
+    card.append(h3);
+    card.append(dtl);
+    job.append(card);
     job.attr('onclick', 'setDetail(this);');
-    job.attr('data-link', jobs[x].link);
-    const title = $('<p>').text(`Title: ${jobs[x].title}`);
-    const company = $('<p>').text(`Company: ${jobs[x].company}`);
-    const description = $('<p>').text(`Description: ${jobs[x].description}`);
-    const link = $('<a>').attr('href', jobs[x].link).text(jobs[x].link);
-    job.append(title);
-    job.append(company);
-    job.append(description);
-    job.append(link);
+    job.attr('data-desc', jobs[x].description);
     $('#jobsList').append(job);
   }
   // Populate Job Detail Section from first Job Link
-  const el = $('<iframe>');
-  el.attr('src', jobs[0].link);
-  $('#jobDetail').append(el);
+  $('#jobDetail').html(jobs[0].description);
 }
 
 // USAJOBS API
@@ -111,19 +115,6 @@ function getUSAJOBS(key, loc) {
   });
 }
 
-$('#primary-menu').on(
-  'show.zf.dropdownmenu', function() {
-    var dropdown = $(this).find('.is-dropdown-submenu');
-    dropdown.css('display', 'none');
-    dropdown.fadeIn('slow');
-});
-$('#primary-menu').on(
-  'hide.zf.dropdownmenu', function() {
-    var dropdown = $(this).find('.is-dropdown-submenu');
-    dropdown.css('display', 'inherit');
-    dropdown.fadeOut('slow');
-});
-
 // MUSE API
 function getMUSEJOBS(category, loc) {
   $.ajax({
@@ -152,7 +143,7 @@ $('#btnSearch').click(() => {
     alert_msg('Warning', 'You must enter a City or Zip Code!', true, 1);
     return false;
   }
-  if ($('#txtKeyword').val() === '' && $('#txtCategory').val() === '') {
+  if ($('#txtKeyword').val() === '' && $('#txtCategory').val() === 'Select a Category') {
     alert_msg('Warning', 'You must enter either a Keyword or a Category!', true, 1);
     return false;
   }
@@ -162,7 +153,7 @@ $('#btnSearch').click(() => {
   $('#jobsList').empty();
   // Clear Job Detail Section
   $('#jobDetail').empty();
-  if ($('#txtCategory').val() != '') {
+  if ($('#txtCategory').val() !== '' && $('#txtCategory').val() !== 'Select a Category') {
     const category = $('#txtCategory').val();
     const location = $('#txtLocation').val();
     getMUSEJOBS(category, location);
