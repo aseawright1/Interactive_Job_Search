@@ -48,7 +48,20 @@
       -ms-grid-column: 1;
           grid-column-start: 1;
       grid-column-end: 4;
+      overflow: scroll;
     }
+  }
+
+#jobs-list {
+  overflow: scroll;
+  height: 85vh;
+  }
+
+  #job-listings-header {
+  /* padding: 1rem; */
+  border: 1px solid #ededed;
+  background-color: #ededed;
+  position: fixed;
   }
   
   @media screen and (max-width: 60em) {
@@ -64,6 +77,19 @@
       padding: 20px;
     }
   }
+
+  #job-detail-header {
+    /* padding: 1rem; */
+    border: 1px solid #ededed;
+    background-color: #ededed;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;    }
+
+  #jobs-detail {
+    overflow: scroll;
+    height: 85vh;
+    }
   
   @media screen and (max-width: 60em) {
     .right-nav {
