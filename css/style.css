@@ -34,7 +34,7 @@
     grid-column-end: 4;
     grid-row: 1;
         grid-row-start: 1;
-        position: sticky;
+        position: fixed;
         top: 0;
   }
   
@@ -45,17 +45,17 @@
     top: 20px;
 }
 
-#Dropper {
+.dropper {
     position: absolute;
     left: 350px;
     top: -0px;
 }
 
-.fa {
+.btn {
   position: absolute;
   right: -770px;
   top: 0%;
-  background-color: blue;
+  background-color: lightskyblue;
   color: black;
   padding: 10px;
 }
@@ -112,5 +112,9 @@
   
   body{
       overflow: scroll;
+  }
+
+  .highlight {
+    background-color: lemonchiffon;
   }
 

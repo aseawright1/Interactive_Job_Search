@@ -9,67 +9,74 @@
   <!-- jQueryUI library Stylesheet -->
   <link rel="stylesheet" href="css/jquery-ui.min.css">
   <!-- Application Stylesheet -->
-
   <link rel="stylesheet" href="css/style.css">
-
   <link rel="stylesheet" href="css/page-layout.css">
   <link rel="stylesheet" href="css/job-card.css">
 </head>
+
 <body>
+  <!-- <div class="holy-grail-grid"> -->
+  <div class="page-layout">
+    <!-- <div class="holy-grail-header"> -->
+    <div class="page-header">
+      <span><h3>Job Search</h3></span>
+      <div class="headerBox">
+        <div class="input-group input-group-rounded">
+          <input id="txtLocation" class="input-group-field" type="search" placeholder="Enter City Or Zip Code">
+        </div>
+        <input id="txtKeyword" class="keyWord" placeholder="Type a Keyword"></input>
+        <select id="txtCategory" class="dropper">
+          <option value = "Select a Category">Select An Option</option>
+          <option value = "Account Management">Account Management</option>
+          <option value = "Business & Strategy">Business & Strategy</option>
+          <option value = "Creative & Design">Creative & Design</option>
+          <option value = "Customer Service">Customer Service</option>
+          <option value = "Data Science">Data Science</option>
+          <option value = "Editorial">Editorial</option>
+          <option value = "Education">Education</option>
+          <option value = "Engineering">Engineering</option>
+          <option value = "Finance">Finance</option>
+        </select> <p id="or">or</p>
+        <button id="btnSearch" class="btn">Search</button>
+      </div>
+    </div>
 
-  <!-- HTML Content Goes HERE -->
-
-    <!-- FOUNDATION TEMPLATES USED AND MODIFIED:
-    https://get.foundation/building-blocks/blocks/holy-grail.html
-    https://get.foundation/building-blocks/blocks/card-flex-article.html -->
-
-    <body>
-      <div class="holy-grail-grid">
-          <div class="holy-grail-header">
-            <h3>Header</h3><div class="headerBox"><div class="input-group input-group-rounded">
-            <input class="input-group-field" type="search" placeholder="Enter City Or Zip Code">
-          </div>
-                  <input class="keyWord" placeholder="Type a Keyword"></input>
-                   <select id = "Dropper">
-                     <option value = "1">Select An Option</option>
-                     <option value = "2">Account Management</option>
-                     <option value = "2">Business & Strategy</option>
-                     <option value = "3">Creative & Design</option>
-                     <option value = "4">Customer Service</option>
-                     <option value = "3">Data Science</option>
-                     <option value = "4">Editorial</option>
-                     <option value = "2">Education</option>
-                     <option value = "3">Engineering</option>
-                     <option value = "4">Finance</option>
-                   </select> <p id="or">or</p>
-                   <button type="submit"><i class="fa fa-search">Submit</i></button>
-                  
-          </div></div>
-  
-    <div id="jobsList" class="page-left">
+    <div class="page-left">
       <h3>Job Listings</h3>
+      <div id="jobsList">
 
-      <div class="card-flex-article card">
-        <div class="card-section">
-          <h3 class="article-title">Insert Job Title</h3>
-          <div class="article-details">
-
-            <span>Company</span><br> 
-            <span>Link</span>
+        <div class="card-flex-article card">
+          <div class="card-section">
+            <h3 class="article-title">Insert Job Title</h3>
+            <div class="article-details">
+              <span>Company</span><br> 
+              <span>Link</span>
+            </div>
           </div>
         </div>
+
       </div>
-
-
     </div>
-    <div id="jobDetail" class="page-middle">
+
+    <div class="page-middle">
       <h3>Job Description</h3>
+      <div id="jobDetail" ></div>
     </div>
-             
-    </div>
+          
+  </div> <!-- End of Holy Grail Grid -->
     
   
-    
-
-  </div>  
+  <!-- reference Moment.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+  <!-- jQuery library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Foundation Framework Library -->
+  <script src="foundation-6.5.1/js/foundation.min.js"></script>
+  <script src="foundation-6.5.1/js/what-input.js"></script>
+  <!-- jQueryUI library -->
+  <script src="scripts/jquery-ui.min.js"></script>
+  <!-- Application javascript library -->
+  <script src="scripts/script.js"></script>
+</body>
+</html> 
 
