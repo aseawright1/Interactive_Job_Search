@@ -130,9 +130,14 @@ div.scroll {
   
   body{
       overflow: scroll;
+      background-color: transparent;
+      background-image: url('https://image.freepik.com/free-vector/colourful-donut-glaze-with-sprinkles-mixture-light-blue-background_23-2148265173.jpg');
   }
 
   .highlight {
     background-color: lemonchiffon;
   }
 
+div.page-header {
+  background-color: dodgerblue;
+}
