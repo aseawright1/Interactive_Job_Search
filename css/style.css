@@ -1,70 +1,30 @@
 .inline {
-  display: inline;
-  padding: 0px 20px 0px 0px;
-  font-size: larger;
+    display: inline;
+    padding: 0px 20px 0px 0px;
+    font-size: larger;
 }
 
 div.scroll {
-  margin:4px, 4px;
-  padding:4px;
-  width: 100%;
-  height: 450px;
-  overflow-x: hidden;
-  overflow-x: auto;
+    margin: 4px, 4px;
+    padding: 4px;
+    width: 100%;
+    height: 80vh;
+    overflow-x: hidden;
+    overflow-x: auto;
 }
 
 #txtLocation {
-  display: inline;
-  margin: 0px 400px 0px 10px;
-  align-content: center;
+    display: inline;
+    margin: 0px 400px 0px 10px;
+    align-content: center;
 }
 
-.holy-grail-grid {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 3fr 1fr;
-        grid-template-columns: 1fr 3fr 1fr;
-    -ms-grid-rows: 1fr 8fr 1fr;
-        grid-template-rows: 1fr 8fr 1fr;
-    grid-gap: 20px;
-    height: 100vh;
-  }
-  
-  @media screen and (max-width: 60em) {
-    .holy-grail-grid {
-      -ms-grid-rows: 2fr 1fr 5fr 1fr;
-          grid-template-rows: 2fr 1fr 5fr 1fr;
-    }
-  }
-  
-  .holy-grail-header,
-  .holy-grail-left,
-  .holy-grail-middle,
-  .holy-grail-right,
-  .holy-grail-footer {
-    padding: 1rem;
-    border: 1px solid #ededed;
-    background-color: #ededed;
-  }
-  
-  .holy-grail-header {
-    grid-column: 1;
-        grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row: 1;
-        grid-row-start: 1;
-        position: fixed;
-        top: 0;
-  }
-  
 .headerBox {
-    width: 15%; 
+    width: 15%;
     position: absolute;
     right: 77%;
     top: 20px;
 }
-
-
 
 .dropper {
     width: fit-content;
@@ -72,72 +32,36 @@ div.scroll {
 }
 
 .btn {
-  position: absolute;
-  right: -770px;
-  top: 0%;
-  background-color: lightskyblue;
-  color: black;
-  padding: 10px;
+    position: absolute;
+    right: -770px;
+    top: 0%;
+    background-color: lightskyblue;
+    color: black;
+    padding: 10px;
 }
 
 #or {
-  margin: 0px 0px 0px 150px;
+    margin: 0px 0px 0px 150px;
 }
 
 .keyWord {
-   position: absolute;
-   right: -700px;
-   top: 0%;
-   background-color: white;
-   height: 37px;
+    position: absolute;
+    right: -700px;
+    top: 0%;
+    background-color: white;
+    height: 37px;
 }
 
-  @media screen and (max-width: 60em) {
-    .holy-grail-left {
-      grid-row: 2;
-          grid-row-start: 2;
-      grid-column: 1;
-          grid-column-start: 1;
-      grid-column-end: 4;
-    }
-  }
-  
-  @media screen and (max-width: 60em) {
-    .holy-grail-middle {
-      grid-row: 3;
-          grid-row-start: 3;
-      grid-column: 1;
-          grid-column-start: 1;
-      grid-column-end: 4;
-    }
-  }
-  
-  @media screen and (max-width: 60em) {
-    .right-nav {
-      grid-row: 4;
-          grid-row-start: 4;
-      grid-column: 1;
-          grid-column-start: 1;
-      grid-column-end: 4;
-    }
-  }
-  
-  .holy-grail-footer {
-    grid-column: 1;
-        grid-column-start: 1;
-    grid-column-end: 4;
-  }
-  
-  body{
-      overflow: scroll;
-      background-color: transparent;
-      background-image: url('https://image.freepik.com/free-vector/colourful-donut-glaze-with-sprinkles-mixture-light-blue-background_23-2148265173.jpg');
-  }
+body {
+    overflow: scroll;
+    background-color: transparent;
+    background-image: url('https://image.freepik.com/free-vector/colourful-donut-glaze-with-sprinkles-mixture-light-blue-background_23-2148265173.jpg');
+}
 
-  .highlight {
+.highlight {
     background-color: lemonchiffon;
-  }
+}
 
 div.page-header {
-  background-color: dodgerblue;
+    background-color: dodgerblue;
 }

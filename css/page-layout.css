@@ -2,83 +2,59 @@
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 3fr 1fr;
-        grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
     -ms-grid-rows: 1fr 8fr 1fr;
-        grid-template-rows: 1fr 8fr 1fr;
+    grid-template-rows: 1fr 8fr 1fr;
     grid-gap: 20px;
-    height: 100vh;    
-  }
-  
-  @media screen and (max-width: 60em) {
+    height: 100vh;
+}
+
+@media screen and (max-width: 60em) {
     .page-grid {
-      -ms-grid-rows: 2fr 1fr 5fr 1fr;
-          grid-template-rows: 2fr 1fr 5fr 1fr;
+        -ms-grid-rows: 2fr 1fr 5fr 1fr;
+        grid-template-rows: 2fr 1fr 5fr 1fr;
     }
-  }
-  
-  .page-header,
-  .page-left,
-  .page-middle,
-  .page-right,
-  .page-footer {
+}
+
+.page-header,
+.page-left,
+.page-middle,
+.page-right,
+.page-footer {
     padding: 1rem;
     border: 1px solid #ededed;
     background-color: #ededed;
-  }
-  
-.search1,.search2 {
+}
+
+.search1,
+.search2 {
     width: 30%;
 }
 
-  .page-header {
+.page-header {
     -ms-grid-column: 1;
-        grid-column-start: 1;
+    grid-column-start: 1;
     grid-column-end: 4;
     -ms-grid-row: 1;
-        grid-row-start: 1;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
-  }
+    grid-row-start: 1;
+}
 
-  @media screen and (max-width: 60em) {
+@media screen and (max-width: 60em) {
     .page-left {
-      -ms-grid-row: 2;
-          grid-row-start: 2;
-      -ms-grid-column: 1;
-          grid-column-start: 1;
-      grid-column-end: 4;
-    }
-  }
-  
-  @media screen and (max-width: 60em) {
-    .page-middle {
-      -ms-grid-row: 3;
-          grid-row-start: 3;
-      -ms-grid-column: 1;
-          grid-column-start: 1;
-      grid-column-end: 4;
-      position: sticky;
-      position: -webkit-sticky;
-      top: 20; /* required */
-      padding: 20px;
-    }
-  }
-  
-  @media screen and (max-width: 60em) {
-    .right-nav {
-      -ms-grid-row: 4;
-          grid-row-start: 4;
-      -ms-grid-column: 1;
-          grid-column-start: 1;
-      grid-column-end: 4;
-    }
-  }
-  
-  .page-footer {
-    -ms-grid-column: 1;
+        -ms-grid-row: 2;
+        grid-row-start: 2;
+        -ms-grid-column: 1;
         grid-column-start: 1;
-    grid-column-end: 4;
-  }
-  
-  
+        grid-column-end: 4;
+    }
+}
+
+@media screen and (max-width: 60em) {
+    .page-middle {
+        -ms-grid-row: 3;
+        grid-row-start: 3;
+        -ms-grid-column: 1;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+}
