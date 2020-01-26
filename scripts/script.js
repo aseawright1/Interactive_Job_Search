@@ -70,7 +70,7 @@ function parseJobs() {
   for (let x = 0; x < jobs.length; x += 1) {
     const sp1 = $('<span>').text(`Company: ${jobs[x].company}`);
     const sp2 = $('<span>');
-    const link = sp2.append($('<a>').attr('href', jobs[x].link).text(jobs[x].link));
+    const link = sp2.append($('<a>').attr('href', jobs[x].link).attr('target', '_blank').text(jobs[x].link));
     const h3 = $('<h3>').addClass('article-title').text(jobs[x].title);
     const dtl = $('<div>').addClass('article-details');
     const card = $('<div>').addClass('card-section');
@@ -167,7 +167,6 @@ $('#btnSearch').click(() => {
     getUSAJOBS(keyword, location);
   }
 });
-
-// Test functions
-// getUSAJOBS('Web Developer', 'Overland Park,KS');
-// getMUSEJOBS('Data Science', 'Overland Park,KS');
+$('#txtKeyword').on('keydown', () => {
+  $('#txtCategory').val('Select a Category');
+});
