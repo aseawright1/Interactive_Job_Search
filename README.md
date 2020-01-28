@@ -1,4 +1,4 @@
-# Interactive_Job_Search :donut:
+# Interactive_Job_Search :doughnut:
 Our first group project.
 
 Donuts & Sprinkles Job Search application
