@@ -15,7 +15,7 @@ div.scroll {
 
 #txtLocation {
     display: inline;
-    margin: 0px 400px 0px 10px;
+    margin: 0px 300px 0px 10px;
     align-content: center;
 }
 
@@ -41,12 +41,12 @@ div.scroll {
 }
 
 #or {
-    margin: 0px 0px 0px 150px;
+    margin: 0px 0px 0px 110px;
 }
 
 .keyWord {
     position: absolute;
-    right: -700px;
+    right: -650px;
     top: 0%;
     background-color: white;
     height: 37px;
