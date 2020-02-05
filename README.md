@@ -1,6 +1,4 @@
 # Interactive_Job_Search :doughnut:
-Our first group project.
-
 Donuts & Sprinkles Job Search application
 
 # Description/Process
